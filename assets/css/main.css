@@ -579,7 +579,7 @@ h6 {
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   display: flex;
   margin: auto;
-  min-width: 1140px;
+  /* min-width: 1140px; */
   align-items: center;
   justify-content: space-between;
 }
@@ -588,6 +588,24 @@ h6 {
   margin-bottom: 0;
 }
 
+@media (max-width: 1200px) {
+  .dmcaProtected {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dmcaProtected {
+    margin: 10px;
+    display: flex;
+  }
+ 
+}
 
 /*--------------------------------------------------------------
 # Scroll Top Button
@@ -1771,6 +1789,7 @@ section,
 .services .service-card .read-more:hover i {
   transform: translateX(5px);
 }
+
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
@@ -1871,6 +1890,7 @@ section,
   opacity: 1;
   bottom: 0;
 }
+
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
@@ -2018,7 +2038,7 @@ section,
   border-radius: 50px;
 }
 
-.pricing .pricing-card .btn.btn-primary {
+.pricing .pricing-card .btn.btn-primary,.features-cards .btn-primary {
   background: var(--accent-color);
   border: none;
   color: var(--contrast-color);
