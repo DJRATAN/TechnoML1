@@ -656,7 +656,7 @@ h6 {
 .page-title {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 170px 0 80px 0;
+  padding: 120px 0 40px 0;
   text-align: center;
   position: relative;
 }

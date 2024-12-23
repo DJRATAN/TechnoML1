@@ -31,92 +31,176 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .tabs {
+      margin-bottom: 20px;
+    }
+
+    .tabs button {
+      padding: 10px 20px;
+      margin: 0 5px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .tabs button.active {
+      background-color: #fff;
+      color: #043270;
+      border: 1px solid #043270;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      width: 300px;
+      height: 400px;
+      perspective: 1000px;
+      position: relative;
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-front {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-front h2 {
+      margin: 15px 0;
+      color: #333;
+    }
+
+    .card-front p {
+      margin: 0 15px;
+      color: #777;
+    }
+
+    .card-front .apply-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none;
+    }
+
+    .card-front:hover .apply-btn {
+      display: block;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card-back h2 {
+      margin-bottom: 10px;
+    }
+
+    .card-back p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 25%;
+      left: 0;
+      width: 200px;
+      background-color: #043270;
+      color: white;
+      padding: 20px;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .sidebar button {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: white;
+      color: #043270;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .sidebar button.active {
+      background-color: #0056b3;
+      color: white;
+    }
+
+    .image-display {
+      margin-left: 220px;
+      text-align: center;
+    }
+
+    .image-display img {
+      max-width: 500px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 700px) {
+      .sidebar {
+        position: relative;
+        width: 100%;
+      }
+
+      .image-display {
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
-<style>
-  .card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-  }
-
-  .card {
-    width: 100%;
-    height: 400px;
-    perspective: 1000px;
-    position: relative;
-  }
-
-  .card-inner {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
-  }
-
-  .card:hover .card-inner {
-    transform: rotateY(180deg);
-  }
-
-  .card-front,
-  .card-back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  .card-front {
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .card-front img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .card-front h2 {
-    margin: 15px 0;
-    color: #333;
-  }
-
-  .card-front p {
-    margin: 0 15px;
-    color: #777;
-  }
-
-
-
-  .card-back {
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .card-back h2 {
-    margin-bottom: 10px;
-  }
-
-  .card-back p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-</style>
 
 <body class="starter-page-page">
 
@@ -147,171 +231,453 @@
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Starter Section Section -->
-    <section id="starter-section" class="starter-section section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Starter Section</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+    <div class="sidebar">
+      <button onclick="showImage('content1')">Computer Science</button>
+      <button onclick="showImage('content2')">Management</button>
+      <!-- <button onclick="showImage('content3')">Electronics & Communication</button> -->
+      <!-- <button onclick="showImage('content4')">Aeronautical</button> -->
+      <!-- <button onclick="showImage('content5')">Civil</button> -->
+      <!-- <button onclick="showImage('content6')">Bio-Technology</button> -->
+      <!-- <button onclick="showImage('content7')">Medical</button> -->
+    </div>
 
-      <div class="container" data-aos="fade-up">
-        <p>Use this page as a starter for your own custom pages.</p>
+    <div class="image-display" id="imageDisplay">
+      <div id="content1" style="display: block;">
+        <section id="features-cards" class="features-cards section">
+          <div class="tabs container text-center my-3">
+            <button class="btn  active me-0 me-sm-2 mx-1" onclick="filterCards('all')">All</button>
+            <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('cyber')">Cyber</button>
+            <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('aiml')">AI & ML</button>
+            <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('design')">Design</button>
+            <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('web')">web</button>
+            <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('developer')">Developer</button>
+            <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('app')">App</button>
+            <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('web3')">web 3.0</button>
+            <!-- <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('web3')">web 3.0</button> -->
+          </div>
+          <div class="container card-container">
+            <div class="card" data-category="web">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="assets/img/internship/Web Development.png" alt="Card Image">
+                  <h2>Web Developement</h2>
+                </div>
+                <div class="card-back">
+                  <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
+                    back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
+                    certificate await you</p>
+                  <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                  <div class="flex">
+
+                    <a href="#" class="btn btn-primary">1 Month ➜</a>
+
+                    <a href="#" class="btn btn-primary">3 Months ➜</a>
+                    <a href="#" class="btn btn-primary">6 Months ➜</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" data-category="aiml">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="assets/img/internship/Web Development.png" alt="Card Image">
+                  <h2>Computer Vision</h2>
+                </div>
+                <div class="card-back">
+                  <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
+                    back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
+                    certificate await you</p>
+                  <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                  <div class="flex">
+
+                    <a href="#" class="btn btn-primary">1 Month ➜</a>
+
+                    <a href="#" class="btn btn-primary">3 Months ➜</a>
+                    <a href="#" class="btn btn-primary">6 Months ➜</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" data-category="web">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="assets/img/internship/Web Development.png" alt="Card Image">
+                  <h2>React Js</h2>
+                </div>
+                <div class="card-back">
+                  <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
+                    back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
+                    certificate await you</p>
+                  <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                  <div class="flex">
+
+                    <a href="#" class="btn btn-primary">1 Month ➜</a>
+
+                    <a href="#" class="btn btn-primary">3 Months ➜</a>
+                    <a href="#" class="btn btn-primary">6 Months ➜</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" data-category="app">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="assets/img/internship/Web Development.png" alt="Card Image">
+                  <h2>Android Development</h2>
+                </div>
+                <div class="card-back">
+                  <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
+                    back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
+                    certificate await you</p>
+                  <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                  <div class="flex">
+
+                    <a href="#" class="btn btn-primary">1 Month ➜</a>
+
+                    <a href="#" class="btn btn-primary">3 Months ➜</a>
+                    <a href="#" class="btn btn-primary">6 Months ➜</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" data-category="web3">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="assets/img/internship/Web Development.png" alt="Card Image">
+                  <h2>Web 3.0</h2>
+                </div>
+                <div class="card-back">
+                  <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
+                    back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
+                    certificate await you</p>
+                  <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                  <div class="flex">
+
+                    <a href="#" class="btn btn-primary">1 Month ➜</a>
+
+                    <a href="#" class="btn btn-primary">3 Months ➜</a>
+                    <a href="#" class="btn btn-primary">6 Months ➜</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" data-category="web">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="assets/img/internship/Web Development.png" alt="Card Image">
+                  <h2>Backend - Developer</h2>
+                </div>
+                <div class="card-back">
+                  <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
+                    back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
+                    certificate await you</p>
+                  <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                  <div class="flex">
+
+                    <a href="#" class="btn btn-primary">1 Month ➜</a>
+
+                    <a href="#" class="btn btn-primary">3 Months ➜</a>
+                    <a href="#" class="btn btn-primary">6 Months ➜</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" data-category="aiml">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="assets/img/internship/Web Development.png" alt="Card Image">
+                  <h2>Data Analytics </h2>
+                </div>
+                <div class="card-back">
+                  <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
+                    back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
+                    certificate await you</p>
+                  <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                  <div class="flex">
+
+                    <a href="#" class="btn btn-primary">1 Month ➜</a>
+
+                    <a href="#" class="btn btn-primary">3 Months ➜</a>
+                    <a href="#" class="btn btn-primary">6 Months ➜</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" data-category="cyber">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="assets/img/internship/Web Development.png" alt="Card Image">
+                  <h2>Cyber Security</h2>
+                </div>
+                <div class="card-back">
+                  <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
+                    back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
+                    certificate await you</p>
+                  <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                  <div class="flex">
+
+                    <a href="#" class="btn btn-primary">1 Month ➜</a>
+
+                    <a href="#" class="btn btn-primary">3 Months ➜</a>
+                    <a href="#" class="btn btn-primary">6 Months ➜</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" data-category="developer">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="assets/img/internship/Web Development.png" alt="Card Image">
+                  <h2>Core JAVA</h2>
+                </div>
+                <div class="card-back">
+                  <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
+                    back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
+                    certificate await you</p>
+                  <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                  <div class="flex">
+
+                    <a href="#" class="btn btn-primary">1 Month ➜</a>
+
+                    <a href="#" class="btn btn-primary">3 Months ➜</a>
+                    <a href="#" class="btn btn-primary">6 Months ➜</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" data-category="aiml">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="assets/img/internship/Web Development.png" alt="Card Image">
+                  <h2>Machine Learning</h2>
+                </div>
+                <div class="card-back">
+                  <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
+                    back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
+                    certificate await you</p>
+                  <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                  <div class="flex">
+
+                    <a href="#" class="btn btn-primary">1 Month ➜</a>
+
+                    <a href="#" class="btn btn-primary">3 Months ➜</a>
+                    <a href="#" class="btn btn-primary">6 Months ➜</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" data-category="app">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="assets/img/internship/Web Development.png" alt="Card Image">
+                  <h2>Flutter Developer</h2>
+                </div>
+                <div class="card-back">
+                  <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
+                    back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
+                    certificate await you</p>
+                  <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                  <div class="flex">
+
+                    <a href="#" class="btn btn-primary">1 Month ➜</a>
+
+                    <a href="#" class="btn btn-primary">3 Months ➜</a>
+                    <a href="#" class="btn btn-primary">6 Months ➜</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" data-category="design">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="assets/img/internship/Web Development.png" alt="Card Image">
+                  <h2>UI/UX</h2>
+                </div>
+                <div class="card-back">
+                  <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
+                    back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
+                    certificate await you</p>
+                  <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                  <div class="flex">
+
+                    <a href="#" class="btn btn-primary">1 Month ➜</a>
+
+                    <a href="#" class="btn btn-primary">3 Months ➜</a>
+                    <a href="#" class="btn btn-primary">6 Months ➜</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" data-category="aiml">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="assets/img/internship/Web Development.png" alt="Card Image">
+                  <h2>Data Science</h2>
+                </div>
+                <div class="card-back">
+                  <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
+                    back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
+                    certificate await you</p>
+                  <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                  <div class="flex">
+
+                    <a href="#" class="btn btn-primary">1 Month ➜</a>
+
+                    <a href="#" class="btn btn-primary">3 Months ➜</a>
+                    <a href="#" class="btn btn-primary">6 Months ➜</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section><!-- /Starter Section Section -->
+
+
+      </div>
+      <div id="content2" style="display: none;">
+        <section id="features-cards" class="features-cards section">
+          <div class="tabs container text-center my-3">
+            <button class="btn active me-0 me-sm-2 mx-1" onclick="filterCards('all')">All</button>
+            <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('stockMarketing')">Stock
+              Marketing</button>
+            <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('finance')">Finance</button>
+            <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('humanResources')">Human
+              Resources</button>
+            <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('marketing')">Marketing</button>
+            <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('digitalMarketing')">Digital
+              Marketing</button>
+          </div>
+          <div class="container card-container">
+            <div class="card" data-category="humanResources">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="assets/img/internship/Web Development.png" alt="Card Image">
+                  <h2>Human Resources</h2>
+                </div>
+                <div class="card-back">
+                  <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
+                    back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
+                    certificate await you</p>
+                  <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                  <div class="flex">
+
+                    <a href="#" class="btn btn-primary">1 Month ➜</a>
+
+                    <a href="#" class="btn btn-primary">3 Months ➜</a>
+                    <a href="#" class="btn btn-primary">6 Months ➜</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" data-category="digitalMarketing">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="assets/img/internship/Web Development.png" alt="Card Image">
+                  <h2>Digital Marketing</h2>
+                </div>
+                <div class="card-back">
+                  <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
+                    back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
+                    certificate await you</p>
+                  <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                  <div class="flex">
+
+                    <a href="#" class="btn btn-primary">1 Month ➜</a>
+
+                    <a href="#" class="btn btn-primary">3 Months ➜</a>
+                    <a href="#" class="btn btn-primary">6 Months ➜</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" data-category="stockMarketing">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="assets/img/internship/Web Development.png" alt="Card Image">
+                  <h2>Stock Marketing</h2>
+                </div>
+                <div class="card-back">
+                  <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
+                    back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
+                    certificate await you</p>
+                  <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                  <div class="flex">
+
+                    <a href="#" class="btn btn-primary">1 Month ➜</a>
+
+                    <a href="#" class="btn btn-primary">3 Months ➜</a>
+                    <a href="#" class="btn btn-primary">6 Months ➜</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" data-category="marketing">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="assets/img/internship/Web Development.png" alt="Card Image">
+                  <h2>Marketing</h2>
+                </div>
+                <div class="card-back">
+                  <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
+                    back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
+                    certificate await you</p>
+                  <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                  <div class="flex">
+
+                    <a href="#" class="btn btn-primary">1 Month ➜</a>
+
+                    <a href="#" class="btn btn-primary">3 Months ➜</a>
+                    <a href="#" class="btn btn-primary">6 Months ➜</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" data-category="finance">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="assets/img/internship/Web Development.png" alt="Card Image">
+                  <h2>Finance</h2>
+                </div>
+                <div class="card-back">
+                  <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
+                    back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
+                    certificate await you</p>
+                  <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                  <div class="flex">
+
+                    <a href="#" class="btn btn-primary">1 Month ➜</a>
+
+                    <a href="#" class="btn btn-primary">3 Months ➜</a>
+                    <a href="#" class="btn btn-primary">6 Months ➜</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section><!-- /Starter Section Section -->
       </div>
 
-    </section><!-- /Starter Section Section -->
-
-    <!-- Features Cards Section -->
-    <section id="features-cards" class="features-cards section">
-
-      <div class="tabs container text-center my-3">
-        <button class="btn active me-0 me-sm-2 mx-1" onclick="filterCards('all')">All</button>
-        <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('it')">IT</button>
-        <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('marketing')">Marketing</button>
-        <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('finance')">Finance</button>
-      </div>
-      <div class="container card-container">
-        <div class="card" data-category="it">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="assets/img/internship/Web Development.png" alt="Card Image">
-              <h2>Web Development</h2>
-            </div>
-            <div class="card-back">
-              <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
-                back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
-                certificate await you</p>
-              <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
-
-              <div class="flex">
-
-                <a href="#" class="btn btn-primary">1 Month ➜</a>
-
-                <a href="#" class="btn btn-primary">3 Months ➜</a>
-                <a href="#" class="btn btn-primary">6 Months ➜</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card" data-category="finance">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="assets/img/internship/Web Development.png" alt="Card Image">
-              <h2>Web Development</h2>
-            </div>
-            <div class="card-back">
-              <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
-                back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
-                certificate await you</p>
-              <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
-
-              <div class="flex">
-
-                <a href="#" class="btn btn-primary">1 Month ➜</a>
-
-                <a href="#" class="btn btn-primary">3 Months ➜</a>
-                <a href="#" class="btn btn-primary">6 Months ➜</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card" data-category="marketing">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="assets/img/internship/Web Development.png" alt="Card Image">
-              <h2>Web Development</h2>
-            </div>
-            <div class="card-back">
-              <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
-                back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
-                certificate await you</p>
-              <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
-
-              <div class="flex">
-
-                <a href="#" class="btn btn-primary">1 Month ➜</a>
-
-                <a href="#" class="btn btn-primary">3 Months ➜</a>
-                <a href="#" class="btn btn-primary">6 Months ➜</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card" data-category="finance">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="assets/img/internship/Web Development.png" alt="Card Image">
-              <h2>Web Development</h2>
-            </div>
-            <div class="card-back">
-              <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
-                back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
-                certificate await you</p>
-              <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
-
-              <div class="flex">
-
-                <a href="#" class="btn btn-primary">1 Month ➜</a>
-
-                <a href="#" class="btn btn-primary">3 Months ➜</a>
-                <a href="#" class="btn btn-primary">6 Months ➜</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card" data-category="it">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="assets/img/internship/Web Development.png" alt="Card Image">
-              <h2>Web Development</h2>
-            </div>
-            <div class="card-back">
-              <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
-                back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
-                certificate await you</p>
-              <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
-
-              <div class="flex">
-
-                <a href="#" class="btn btn-primary">1 Month ➜</a>
-
-                <a href="#" class="btn btn-primary">3 Months ➜</a>
-                <a href="#" class="btn btn-primary">6 Months ➜</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="assets/img/internship/Web Development.png" alt="Card Image">
-              <h2>Web Development</h2>
-            </div>
-            <div class="card-back">
-              <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end and
-                back-end development, and gain industry experience. Flexible hours, mentorship, and an internship
-                certificate await you</p>
-              <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
-
-              <div class="flex">
-
-                <a href="#" class="btn btn-primary">1 Month ➜</a>
-
-                <a href="#" class="btn btn-primary">3 Months ➜</a>
-                <a href="#" class="btn btn-primary">6 Months ➜</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-
-    </section><!-- /Starter Section Section -->
-
+    </div>
   </main>
 
   <div id="footer"></div>
@@ -344,6 +710,20 @@
           card.style.display = 'none';
         }
       });
+    }
+    function showImage(contentId) {
+      const contents = document.querySelectorAll('.image-display > div');
+      const buttons = document.querySelectorAll('.sidebar button');
+
+      contents.forEach(content => {
+        content.style.display = content.id === contentId ? 'block' : 'none';
+      });
+
+      buttons.forEach(button => {
+        button.classList.remove('active');
+      });
+
+      document.querySelector(`[onclick="showImage('${contentId}')"]`).classList.add('active');
     }
   </script>
   <!-- Vendor JS Files -->
