@@ -35,7 +35,92 @@
 
 <body class="service-details-page">
 
+  <style>
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
 
+    .card {
+      width: 270px;
+      height: 350px;
+      perspective: 1000px;
+      position: relative;
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-front {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-front h2 {
+      margin: 15px 0;
+      color: #333;
+    }
+
+
+
+    .internbtn {
+      color: #043270 !important;
+      background-color: #fff !important;
+      margin-top: 10px;
+      border: 1px solid #043270 !important;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card-back h2 {
+      margin-bottom: 10px;
+    }
+
+    .card-back p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  </style>
   <!-- index.html, about.html, contact.html -->
   <div id="navbar"></div>
 
@@ -70,7 +155,7 @@
 
         <div class="row gy-5">
 
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
             <div class="service-box">
               <h4>Serices List</h4>
               <div class="services-list">
@@ -106,67 +191,346 @@
 
           </div>
 
-          <div class="image-display col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="image-display col-lg-8" data-aos="fade-up" data-aos-delay="200">
             <div id="content1" style="display: block;">
-              
+              <div class="card-container">
+                <div class="card" data-category="web">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/7766407_3759160.svg" alt="Card Image">
+                      <h2>Web Developement</h2>
+                    </div>
+                    <div class="card-back">
+                      <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end
+                        and
+                        back-end development, and gain industry experience. Flexible hours, mentorship, and an
+                        internship
+                        certificate await you</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                      <div class="flex">
+
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" data-category="web">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/7766407_3759160.svg" alt="Card Image">
+                      <h2>Web Developement</h2>
+                    </div>
+                    <div class="card-back">
+                      <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end
+                        and
+                        back-end development, and gain industry experience. Flexible hours, mentorship, and an
+                        internship
+                        certificate await you</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                      <div class="flex">
+
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" data-category="web">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/7766407_3759160.svg" alt="Card Image">
+                      <h2>Web Developement</h2>
+                    </div>
+                    <div class="card-back">
+                      <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end
+                        and
+                        back-end development, and gain industry experience. Flexible hours, mentorship, and an
+                        internship
+                        certificate await you</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                      <div class="flex">
+
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" data-category="web">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/7766407_3759160.svg" alt="Card Image">
+                      <h2>Web Developement</h2>
+                    </div>
+                    <div class="card-back">
+                      <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end
+                        and
+                        back-end development, and gain industry experience. Flexible hours, mentorship, and an
+                        internship
+                        certificate await you</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                      <div class="flex">
+
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" data-category="web">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/7766407_3759160.svg" alt="Card Image">
+                      <h2>Web Developement</h2>
+                    </div>
+                    <div class="card-back">
+                      <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end
+                        and
+                        back-end development, and gain industry experience. Flexible hours, mentorship, and an
+                        internship
+                        certificate await you</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                      <div class="flex">
+
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" data-category="web">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/7766407_3759160.svg" alt="Card Image">
+                      <h2>Web Developement</h2>
+                    </div>
+                    <div class="card-back">
+                      <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end
+                        and
+                        back-end development, and gain industry experience. Flexible hours, mentorship, and an
+                        internship
+                        certificate await you</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                      <div class="flex">
+
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- </div> -->
 
 
 
 
-              <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
-              <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
-              <p>
-                Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque
-                consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero.
-                Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
-              </p>
-              <ul>
-                <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span>
-                </li>
-                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
-              </ul>
-              <p>
-                Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste
-                veniam repellat odit. Aut pariatur itaque nesciunt fuga.
-              </p>
-              <p>
-                Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia
-                doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus
-                eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur
-                nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero.
-                Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias
-                explicabo ea.
-              </p>
-            </div>
-            <div id="content2" style="display: none;">
-              <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
-              <p>
-                Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque
-                consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero.
-                Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
-              </p>
-              <ul>
-                <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span>
-                </li>
-                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
-              </ul>
-              <p>
-                Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste
-                veniam repellat odit. Aut pariatur itaque nesciunt fuga.
-              </p>
-              <p>
-                Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia
-                doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus
-                eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur
-                nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero.
-                Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias
-                explicabo ea.
-              </p>
+                <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
+                <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
+                <p>
+                  Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque
+                  consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero.
+                  Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
+                  <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt
+                      voluptatibus.</span>
+                  </li>
+                  <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+                </ul>
+                <p>
+                  Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio
+                  iste
+                  veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+                </p>
+                <p>
+                  Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia
+                  doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus
+                  eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates
+                  tenetur
+                  nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero.
+                  Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias
+                  explicabo ea.
+                </p>
+              </div>
+              <div id="content2" style="display: none;">
+                <section id="features-cards" class="features-cards section">
+                  <div class="container card-container">
+                    <div class="card" data-category="web">
+                      <div class="card-inner">
+                        <div class="card-front">
+                          <img src="assets/img/internship/7766407_3759160.svg" alt="Card Image">
+                          <h2>Web Developement</h2>
+                        </div>
+                        <div class="card-back">
+                          <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in
+                            front-end
+                            and
+                            back-end development, and gain industry experience. Flexible hours, mentorship, and an
+                            internship
+                            certificate await you</p>
+                          <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                          <div class="flex">
+
+                            <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                            <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                            <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card" data-category="web">
+                      <div class="card-inner">
+                        <div class="card-front">
+                          <img src="assets/img/internship/7766407_3759160.svg" alt="Card Image">
+                          <h2>Web Developement</h2>
+                        </div>
+                        <div class="card-back">
+                          <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in
+                            front-end
+                            and
+                            back-end development, and gain industry experience. Flexible hours, mentorship, and an
+                            internship
+                            certificate await you</p>
+                          <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                          <div class="flex">
+
+                            <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                            <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                            <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card" data-category="web">
+                      <div class="card-inner">
+                        <div class="card-front">
+                          <img src="assets/img/internship/7766407_3759160.svg" alt="Card Image">
+                          <h2>Web Developement</h2>
+                        </div>
+                        <div class="card-back">
+                          <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in
+                            front-end
+                            and
+                            back-end development, and gain industry experience. Flexible hours, mentorship, and an
+                            internship
+                            certificate await you</p>
+                          <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                          <div class="flex">
+
+                            <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                            <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                            <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card" data-category="web">
+                      <div class="card-inner">
+                        <div class="card-front">
+                          <img src="assets/img/internship/7766407_3759160.svg" alt="Card Image">
+                          <h2>Web Developement</h2>
+                        </div>
+                        <div class="card-back">
+                          <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in
+                            front-end
+                            and
+                            back-end development, and gain industry experience. Flexible hours, mentorship, and an
+                            internship
+                            certificate await you</p>
+                          <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                          <div class="flex">
+
+                            <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                            <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                            <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card" data-category="web">
+                      <div class="card-inner">
+                        <div class="card-front">
+                          <img src="assets/img/internship/7766407_3759160.svg" alt="Card Image">
+                          <h2>Web Developement</h2>
+                        </div>
+                        <div class="card-back">
+                          <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in
+                            front-end
+                            and
+                            back-end development, and gain industry experience. Flexible hours, mentorship, and an
+                            internship
+                            certificate await you</p>
+                          <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                          <div class="flex">
+
+                            <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                            <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                            <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card" data-category="web">
+                      <div class="card-inner">
+                        <div class="card-front">
+                          <img src="assets/img/internship/7766407_3759160.svg" alt="Card Image">
+                          <h2>Web Developement</h2>
+                        </div>
+                        <div class="card-back">
+                          <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in
+                            front-end
+                            and
+                            back-end development, and gain industry experience. Flexible hours, mentorship, and an
+                            internship
+                            certificate await you</p>
+                          <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                          <div class="flex">
+
+                            <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                            <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                            <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </section>
+              </div>
             </div>
           </div>
-
         </div>
 
       </div>

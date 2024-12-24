@@ -92,12 +92,12 @@
     .card-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 20px;
       justify-content: center;
     }
 
     .card {
-      width: 300px;
+      width: 270px;
       height: 350px;
       perspective: 1000px;
       position: relative;
@@ -173,9 +173,6 @@
       font-size: 14px;
       line-height: 1.5;
     }
-
- 
- 
   </style>
 </head>
 
@@ -211,7 +208,7 @@
     <section id="service-details" class="service-details section">
       <div class="container">
         <div class="row gy-5 ">
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
             <div class="service-box">
               <h4>Industrial Internship</h4>
               <div class="services-list sidebar">
@@ -235,336 +232,331 @@
 
           <div class="image-display col-lg-8 ps-lg-5" id="imageDisplay" data-aos="fade-up" data-aos-delay="300">
             <div id="content1" style="display: block;">
-              <section id="features-cards" class="features-cards section">
-                <div class="tabs container text-center my-3">
-                  <button class="btn  active me-0 me-sm-2 mx-1" onclick="filterCards('all')">All</button>
-                  <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('cyber')">Cyber</button>
-                  <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('aiml')">AI & ML</button>
-                  <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('design')">Design</button>
-                  <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('web')">web</button>
-                  <button class="btn btn-primary me-0 me-sm-2 mx-1"
-                    onclick="filterCards('developer')">Developer</button>
-                  <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('app')">App</button>
-                  <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('web3')">web 3.0</button>
-                  <!-- <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('web3')">web 3.0</button> -->
-                </div>
-                <div class="container card-container">
-                  <div class="card" data-category="web">
-                    <div class="card-inner">
-                      <div class="card-front">
-                        <img src="assets/img/internship/7766407_3759160.svg" alt="Card Image">
-                        <h2>Web Developement</h2>
-                      </div>
-                      <div class="card-back">
-                        <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end
-                          and
-                          back-end development, and gain industry experience. Flexible hours, mentorship, and an
-                          internship
-                          certificate await you</p>
-                        <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
-
-                        <div class="flex">
-
-                          <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
-
-                          <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
-                          <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
-                        </div>
-                      </div>
+              <div class="tabs text-center my-3">
+                <button class="btn  active me-0 me-sm-2 mx-1" onclick="filterCards('all')">All</button>
+                <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('cyber')">Cyber</button>
+                <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('aiml')">AI & ML</button>
+                <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('design')">Design</button>
+                <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('web')">web</button>
+                <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('developer')">Developer</button>
+                <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('app')">App</button>
+                <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('web3')">web 3.0</button>
+                <!-- <button class="btn btn-primary me-0 me-sm-2 mx-1" onclick="filterCards('web3')">web 3.0</button> -->
+              </div>
+              <div class="  card-container">
+                <div class="card" data-category="web">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/7766407_3759160.svg" alt="Card Image">
+                      <h2>Web Developement</h2>
                     </div>
-                  </div>
-                  <div class="card" data-category="aiml">
-                    <div class="card-inner">
-                      <div class="card-front">
-                        <img src="assets/img/internship/82635880_9910414.jpg" alt="Card Image">
-                        <h2>Computer Vision</h2>
-                      </div>
-                      <div class="card-back">
-                        <p>Dive into the exciting field of Computer Vision with our internship program! Gain practical
-                          experience in image processing, object detection, and AI-powered visual systems. Ideal for
-                          aspiring
-                          tech enthusiasts ready to transform how machines see the world.</p>
-                        <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+                    <div class="card-back">
+                      <p>Join us as a Web Development Intern! Work on live projects, enhance your skills in front-end
+                        and
+                        back-end development, and gain industry experience. Flexible hours, mentorship, and an
+                        internship
+                        certificate await you</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
 
-                        <div class="flex">
+                      <div class="flex">
 
-                          <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
 
-                          <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
-                          <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card" data-category="web">
-                    <div class="card-inner">
-                      <div class="card-front">
-                        <img src="assets/img/internship/7498976_33290.svg" alt="Card Image">
-                        <h2>React Js</h2>
-                      </div>
-                      <div class="card-back">
-                        <p>Kickstart your journey in modern web development with our React.js Internship! Learn to build
-                          dynamic and responsive user interfaces, work on real-world projects, and master one of the
-                          most
-                          in-demand JavaScript libraries. Perfect for aspiring front-end developers.</p>
-                        <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
-
-                        <div class="flex">
-
-                          <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
-
-                          <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
-                          <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card" data-category="app">
-                    <div class="card-inner">
-                      <div class="card-front">
-                        <img src="assets/img/internship/12291302_Tiny cute children learning coding.svg"
-                          alt="Card Image">
-                        <h2>Android Development</h2>
-                      </div>
-                      <div class="card-back">
-                        <p>Join our Android App Development Internship! Gain hands-on experience, work on real-world
-                          projects,
-                          and enhance your skills in a professional environment. Perfect for aspiring developers looking
-                          to
-                          kickstart their careers.</p>
-                        <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
-
-                        <div class="flex">
-
-                          <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
-
-                          <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
-                          <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card" data-category="web3">
-                    <div class="card-inner">
-                      <div class="card-front">
-                        <img src="assets/img/internship/7498976_33290.svg" alt="Card Image">
-                        <h2>Web 3.0</h2>
-                      </div>
-                      <div class="card-back">
-                        <p>Explore the future of technology with our Web 3.0 Internship! Get hands-on experience
-                          building
-                          decentralized applications, working with blockchain, and mastering cutting-edge tools. Perfect
-                          for
-                          innovators ready to shape tomorrow's internet.</p>
-                        <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
-
-                        <div class="flex">
-
-                          <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
-
-                          <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
-                          <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card" data-category="web">
-                    <div class="card-inner">
-                      <div class="card-front">
-                        <img src="assets/img/internship/11669212_20945805.svg" alt="Card Image">
-                        <h2>Backend - Developer</h2>
-                      </div>
-                      <div class="card-back">
-                        <p>Level up your skills with our Backend Developer Internship! Gain hands-on experience in
-                          building
-                          robust server-side applications, working with databases, APIs, and scalable architectures.
-                          Perfect
-                          for aspiring developers passionate about powering the web</p>
-                        <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
-
-                        <div class="flex">
-
-                          <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
-
-                          <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
-                          <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card" data-category="aiml">
-                    <div class="card-inner">
-                      <div class="card-front">
-                        <img src="assets/img/internship/10272352_40752.jpg" alt="Card Image">
-                        <h2>Data Analytics </h2>
-                      </div>
-                      <div class="card-back">
-                        <p>Transform raw data into actionable insights with our Data Analytics Internship! Learn to
-                          analyze,
-                          visualize, and interpret data using advanced tools and techniques. Perfect for aspiring
-                          professionals eager to drive decision-making through data.</p>
-                        <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
-
-                        <div class="flex">
-
-                          <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
-
-                          <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
-                          <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card" data-category="cyber">
-                    <div class="card-inner">
-                      <div class="card-front">
-                        <img src="assets/img/internship/12291302_Tiny cute children learning coding.svg"
-                          alt="Card Image">
-                        <h2>Cyber Security</h2>
-                      </div>
-                      <div class="card-back">
-                        <p>Secure the digital world with our Cyber Security Internship! Gain hands-on experience in
-                          threat
-                          analysis, vulnerability assessment, and implementing defense strategies. Perfect for aspiring
-                          professionals passionate about safeguarding systems and data.</p>
-                        <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
-
-                        <div class="flex">
-
-                          <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
-
-                          <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
-                          <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card" data-category="developer">
-                    <div class="card-inner">
-                      <div class="card-front">
-                        <img src="assets/img/internship/12145578_Wavy_Edu-02_Single-05.svg" alt="Card Image">
-                        <h2>Core JAVA</h2>
-                      </div>
-                      <div class="card-back">
-                        <p>Master the fundamentals of programming with our Core Java Internship! Gain hands-on
-                          experience in
-                          building robust applications, working with object-oriented concepts, and understanding Java's
-                          core
-                          libraries. Perfect for aspiring developers looking to build a strong coding foundation.</p>
-                        <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
-
-                        <div class="flex">
-
-                          <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
-
-                          <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
-                          <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card" data-category="aiml">
-                    <div class="card-inner">
-                      <div class="card-front">
-                        <img src="assets/img/internship/11435030_4706237.svg" alt="Card Image">
-                        <h2>Machine Learning</h2>
-                      </div>
-                      <div class="card-back">
-                        <p>Embark on an AI-driven journey with our Machine Learning Internship! Gain hands-on experience
-                          in
-                          building predictive models, working with algorithms, and exploring real-world data
-                          applications.
-                          Perfect for aspiring innovators ready to shape the future of technology</p>
-                        <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
-
-                        <div class="flex">
-
-                          <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
-
-                          <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
-                          <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card" data-category="app">
-                    <div class="card-inner">
-                      <div class="card-front">
-                        <img src="assets/img/internship/21532466_6491426.svg" alt="Card Image">
-                        <h2>Flutter Developer</h2>
-                      </div>
-                      <div class="card-back">
-                        <p>Join our Flutter Developer internship to gain hands-on experience in mobile app development.
-                          Work
-                          on real-world projects, enhance your skills in Flutter, and collaborate with experienced
-                          developers.
-                          This opportunity will help you grow as a developer and kickstart your career.</p>
-                        <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
-
-                        <div class="flex">
-
-                          <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
-
-                          <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
-                          <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card" data-category="design">
-                    <div class="card-inner">
-                      <div class="card-front">
-                        <img src="assets/img/internship/10780411_19199025.svg" alt="Card Image">
-                        <h2>UI/UX</h2>
-                      </div>
-                      <div class="card-back">
-                        <p>Join our UI/UX Design internship to gain hands-on experience in creating intuitive and
-                          visually
-                          appealing user interfaces. Work on real-world projects, enhance your design skills, and
-                          collaborate
-                          with experienced designers to craft seamless user experiences. This internship is the perfect
-                          opportunity to grow your expertise and kickstart your career in UI/UX design.</p>
-                        <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
-
-                        <div class="flex">
-
-                          <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
-
-                          <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
-                          <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card" data-category="aiml">
-                    <div class="card-inner">
-                      <div class="card-front">
-                        <img src="assets/img/internship/11641810_4758686.svg" alt="Card Image">
-                        <h2>Data Science</h2>
-                      </div>
-                      <div class="card-back">
-                        <p>Join our Data Science internship to gain hands-on experience in data analysis, machine
-                          learning,
-                          and statistical modeling. Work on real-world projects, analyze large datasets, and develop
-                          valuable
-                          insights. This opportunity will help you grow your skills and advance your career in the field
-                          of
-                          data science.</p>
-                        <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
-
-                        <div class="flex">
-
-                          <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
-
-                          <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
-                          <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
-                        </div>
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
                       </div>
                     </div>
                   </div>
                 </div>
+                <div class="card" data-category="aiml">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/82635880_9910414.jpg" alt="Card Image">
+                      <h2>Computer Vision</h2>
+                    </div>
+                    <div class="card-back">
+                      <p>Dive into the exciting field of Computer Vision with our internship program! Gain practical
+                        experience in image processing, object detection, and AI-powered visual systems. Ideal for
+                        aspiring
+                        tech enthusiasts ready to transform how machines see the world.</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
 
-              </section><!-- /Starter Section Section -->
+                      <div class="flex">
+
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" data-category="web">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/7498976_33290.svg" alt="Card Image">
+                      <h2>React Js</h2>
+                    </div>
+                    <div class="card-back">
+                      <p>Kickstart your journey in modern web development with our React.js Internship! Learn to build
+                        dynamic and responsive user interfaces, work on real-world projects, and master one of the
+                        most
+                        in-demand JavaScript libraries. Perfect for aspiring front-end developers.</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                      <div class="flex">
+
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" data-category="app">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/12291302_Tiny cute children learning coding.svg" alt="Card Image">
+                      <h2>Android Development</h2>
+                    </div>
+                    <div class="card-back">
+                      <p>Join our Android App Development Internship! Gain hands-on experience, work on real-world
+                        projects,
+                        and enhance your skills in a professional environment. Perfect for aspiring developers looking
+                        to
+                        kickstart their careers.</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                      <div class="flex">
+
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" data-category="web3">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/7498976_33290.svg" alt="Card Image">
+                      <h2>Web 3.0</h2>
+                    </div>
+                    <div class="card-back">
+                      <p>Explore the future of technology with our Web 3.0 Internship! Get hands-on experience
+                        building
+                        decentralized applications, working with blockchain, and mastering cutting-edge tools. Perfect
+                        for
+                        innovators ready to shape tomorrow's internet.</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                      <div class="flex">
+
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" data-category="web">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/11669212_20945805.svg" alt="Card Image">
+                      <h2>Backend - Developer</h2>
+                    </div>
+                    <div class="card-back">
+                      <p>Level up your skills with our Backend Developer Internship! Gain hands-on experience in
+                        building
+                        robust server-side applications, working with databases, APIs, and scalable architectures.
+                        Perfect
+                        for aspiring developers passionate about powering the web</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                      <div class="flex">
+
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" data-category="aiml">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/10272352_40752.jpg" alt="Card Image">
+                      <h2>Data Analytics </h2>
+                    </div>
+                    <div class="card-back">
+                      <p>Transform raw data into actionable insights with our Data Analytics Internship! Learn to
+                        analyze,
+                        visualize, and interpret data using advanced tools and techniques. Perfect for aspiring
+                        professionals eager to drive decision-making through data.</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                      <div class="flex">
+
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" data-category="cyber">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/12291302_Tiny cute children learning coding.svg" alt="Card Image">
+                      <h2>Cyber Security</h2>
+                    </div>
+                    <div class="card-back">
+                      <p>Secure the digital world with our Cyber Security Internship! Gain hands-on experience in
+                        threat
+                        analysis, vulnerability assessment, and implementing defense strategies. Perfect for aspiring
+                        professionals passionate about safeguarding systems and data.</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                      <div class="flex">
+
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" data-category="developer">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/12145578_Wavy_Edu-02_Single-05.svg" alt="Card Image">
+                      <h2>Core JAVA</h2>
+                    </div>
+                    <div class="card-back">
+                      <p>Master the fundamentals of programming with our Core Java Internship! Gain hands-on
+                        experience in
+                        building robust applications, working with object-oriented concepts, and understanding Java's
+                        core
+                        libraries. Perfect for aspiring developers looking to build a strong coding foundation.</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                      <div class="flex">
+
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" data-category="aiml">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/11435030_4706237.svg" alt="Card Image">
+                      <h2>Machine Learning</h2>
+                    </div>
+                    <div class="card-back">
+                      <p>Embark on an AI-driven journey with our Machine Learning Internship! Gain hands-on experience
+                        in
+                        building predictive models, working with algorithms, and exploring real-world data
+                        applications.
+                        Perfect for aspiring innovators ready to shape the future of technology</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                      <div class="flex">
+
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" data-category="app">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/21532466_6491426.svg" alt="Card Image">
+                      <h2>Flutter Developer</h2>
+                    </div>
+                    <div class="card-back">
+                      <p>Join our Flutter Developer internship to gain hands-on experience in mobile app development.
+                        Work
+                        on real-world projects, enhance your skills in Flutter, and collaborate with experienced
+                        developers.
+                        This opportunity will help you grow as a developer and kickstart your career.</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                      <div class="flex">
+
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" data-category="design">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/10780411_19199025.svg" alt="Card Image">
+                      <h2>UI/UX</h2>
+                    </div>
+                    <div class="card-back">
+                      <p>Join our UI/UX Design internship to gain hands-on experience in creating intuitive and
+                        visually
+                        appealing user interfaces. Work on real-world projects, enhance your design skills, and
+                        collaborate
+                        with experienced designers to craft seamless user experiences. This internship is the perfect
+                        opportunity to grow your expertise and kickstart your career in UI/UX design.</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                      <div class="flex">
+
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" data-category="aiml">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <img src="assets/img/internship/11641810_4758686.svg" alt="Card Image">
+                      <h2>Data Science</h2>
+                    </div>
+                    <div class="card-back">
+                      <p>Join our Data Science internship to gain hands-on experience in data analysis, machine
+                        learning,
+                        and statistical modeling. Work on real-world projects, analyze large datasets, and develop
+                        valuable
+                        insights. This opportunity will help you grow your skills and advance your career in the field
+                        of
+                        data science.</p>
+                      <p class="btn btn-primary me-0 me-sm-2 mx-1">Apply Now ↓</p>
+
+                      <div class="flex">
+
+                        <a href="#" class="btn btn-primary internbtn">1 Month ➜</a>
+
+                        <a href="#" class="btn btn-primary internbtn">3 Months ➜</a>
+                        <a href="#" class="btn btn-primary internbtn">6 Months ➜</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
 
 
             </div>
